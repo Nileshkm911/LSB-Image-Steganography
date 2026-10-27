@@ -1,0 +1,16 @@
+# Compiled binaries and object files
+*.o
+*.obj
+*.exe
+*.out
+a.out
+stego
+
+# Output test files
+output.txt
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
