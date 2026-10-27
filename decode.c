@@ -10,7 +10,7 @@ Status open_decode_image_files(char *file_name,DecodeInfo *decInfo)
 {
     
         // Src Image file
-        decInfo->fptr_output_image = fopen(file_name, "r");
+        decInfo->fptr_output_image = fopen(file_name, "rb");
         // Do Error handling
         if (decInfo->fptr_output_image == NULL)
         {
@@ -25,7 +25,7 @@ Status open_decode_image_files(char *file_name,DecodeInfo *decInfo)
 }
 Status open_decode_output_file(char* file_name,DecodeInfo* decInfo)
 {
-    decInfo->fptr_output = fopen(file_name, "w");
+    decInfo->fptr_output = fopen(file_name, "wb");
         // Do Error handling
         if (decInfo->fptr_output == NULL)
         {

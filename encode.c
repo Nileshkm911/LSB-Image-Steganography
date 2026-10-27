@@ -84,7 +84,7 @@ Status open_files(EncodeInfo *encInfo)
 {
     printf("INFO: Opening required files\n");
     // Src Image file
-    encInfo->fptr_src_image = fopen(encInfo->src_image_fname, "r");
+    encInfo->fptr_src_image = fopen(encInfo->src_image_fname, "rb");
     // Do Error handling
     if (encInfo->fptr_src_image == NULL)
     {
@@ -96,7 +96,7 @@ Status open_files(EncodeInfo *encInfo)
     printf("INFO: Opened beautiful.bmp\n");
 
     // Secret file
-    encInfo->fptr_secret = fopen(encInfo->secret_fname, "r");
+    encInfo->fptr_secret = fopen(encInfo->secret_fname, "rb");
     // Do Error handling
     if (encInfo->fptr_secret == NULL)
     {
@@ -108,7 +108,7 @@ Status open_files(EncodeInfo *encInfo)
     printf("INFO: Openedsecret.txt\n");
 
     // Stego Image file
-    encInfo->fptr_stego_image = fopen(encInfo->stego_image_fname, "w");
+    encInfo->fptr_stego_image = fopen(encInfo->stego_image_fname, "wb");
     // Do Error handling
     if (encInfo->fptr_stego_image == NULL)
     {
